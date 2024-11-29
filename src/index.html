@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+  <title>Document</title>
+</head>
+
+<body class="bg-gradient-to-r from-blue-800 to-indigo-900 h-screen min-w-[500px] p-8">
+
+  <div class="flex w-full items-center justify-center mb-8">
+    <h1 class="text-4xl text-white font-bold">ToDo List Application
+    </h1>
+    <img src=" ../images/icon.png" alt="icon" class="w-[30px] ml-3">
+  </div>
+
+  <div class="bg-gray-300 min-h-[300px] rounded-xl mx-auto p-6 mb-6">
+    <!-- Input Box -->
+    <div class="w-fit bg-white rounded-xl items-center mx-auto mb-6">
+      <input id="input-box" type="text" placeholder="Write Note..."
+        class="bg-transparent w-[300px] md:w-[500px] p-3 focus:outline-none">
+      <button id="input-btn"
+        class="bg-orange-600 p-3 rounded-xl text-white font-bold hover:bg-orange-500 active:bg-orange-400">Add</button>
+    </div>
+    <!-- Error -->
+    <p id="error-box" class="text-center text-red-800 mb-6"></p>
+    <!-- List -->
+    <div class="cssList px-10">
+      <ul id="ul-cont">
+      </ul>
+    </div>
+  </div>
+
+  <div id="stats" class="flex mb-12 gap-10 items-center justify-between border-4 border-white rounded-xl bg-black/50">
+    <button class=''>
+      <div class=" flex flex-col p-8 py-8 gap-4 text-white font-bold">
+        <h1 class="text-xl">Total tasks</h1>
+        <h1 id="total-li" class="text-5xl"></h1>
+      </div>
+    </button>
+    <button class="">
+      <div class="flex flex-col p-8 py-8 gap-4 text-white font-bold">
+        <h1 class="text-xl">Completed tasks</h1>
+        <h1 id="total-checked" class="text-5xl"></h1>
+      </div>
+    </button>
+    <button class="">
+      <div class="flex flex-col p-8 py-8 gap-4 text-white font-bold">
+        <h1 class="text-xl">Completed Percentage</h1>
+        <h1 id="comp-per" class="text-5xl">0%</h1>
+      </div>
+    </button>
+
+
+
+  </div>
+  <h1><span id="total-li"></span></h1>
+  <h1><span id="total-checked"></span></h1>
+  <h1><span id="comp-per"></span></h1>
+</body>
+
+</html>

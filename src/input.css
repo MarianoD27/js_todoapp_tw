@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cssList ul li {
+  margin-bottom: 12px;
+  font-size: large;
+  user-select: none;
+  position: relative;
+  cursor: pointer;
+  padding: 8px 12px 8px 50px;
+}
+
+.cssList ul li::before {
+  width: 28px;
+  height: 28px;
+  content: "";
+  position: absolute;
+  background-image: url("../images/unchecked.png");
+  background-position: center;
+  background-size: cover;
+  border-radius: 50px;
+  left: -8px;
+  top: 9px;
+  border: solid orange 1px;
+}
+
+.cssList ul li.checked {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.cssList ul li.checked::before {
+  background-image: url("../images/checked.png");
+  border: none;
+}
+
+.cssList ul li span {
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 40px;
+  top: -2px;
+}
+
+.cssList ul li span:hover {
+  background-color: gainsboro;
+}
+
+@media (min-width: 768px) {
+  .cssList ul {
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    column-count: 2;
+    column-gap: 20px;
+  }
+}
